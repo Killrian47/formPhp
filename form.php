@@ -7,42 +7,44 @@
     <title>Form</title>
 </head>
 <body>
-    <form  action="thanks.php"  method="post">
-        <div>
-        <label  for="nom">Nom :</label>
-        <input  type="text"  id="nom"  name="user_name">
-        </div>
-        <div>
-        <label  for="courriel">Courriel :</label>
-            <input  type="email"  id="courriel"  name="user_email">
-        </div>
-        <div>
-            <label for="thema">Your thema</label>
-            <select name="thema" >
-                <option value="">--Please choose an thema--</option>
-                <option value="Pets">Pets</option>
-                <option value="Sports">Sports</option>
-                <option value="Video Games">Video Games</option>
-                <option value="Films">Films</option>
-            </select>
-        </div>
-        <div>
-            <label for="tel">Phone number</label>
-            <input type="tel" name="tel" id="tel">
-        </div>
-        <div>
-        <label  for="message">Message :</label>
-        <textarea  id="message"  name="user_message"></textarea>
-        </div>
-        <div  class="button">
-        <button  type="submit">Envoyer votre message</button>
-        </div>
-    </form>
-    <?php
-        var_dump($_GET);
-        echo  $_GET['user_name'];
-    ?>
-
+<form action="thanks.php" method="post">
+<div> 
+    
+    <label for="nom"> Lastname : </label>
+    <input type="text" id="nom" name="u_lastname"  >
+</div>
+<div> 
+    
+    <label for="prenom"> Firstname : </label>
+    <input type="text" id="prenom" name="u_name" >
+</div>
+<div>
+    <label for="courriel"> Email :</label>
+    <input type="email" id="courriel" name="u_email"  >
+</div>
+<div>
+   
+    <label for="phone">Phone number</label>
+    <input type="tel" name="u_phone" id="phone"  >
+</div>
+<div>
+    <label for="theme">Please choose a theme : </label>
+    <select name="theme" required >
+        <option value="sports">Sports</option> 
+        <option value="video-games">Videos games</option> 
+        <option value="pets">Pets</option> 
+        <option value="animals">Animals</option> 
+    </select>
+    
+</div>
+<div>
+    <label for="message">Message :</label>
+    <textarea name="u_message" id="message"  ></textarea>
+</div>
+<div class="button">
+    <button type="submit">Envoyer votre message</button>
+</div>
+</form>
 
 </body>
 </html>
